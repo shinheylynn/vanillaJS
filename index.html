@@ -1,0 +1,40 @@
+<!-- momenutm 파일은 heylynn\문서에 있음-->
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="https://fonts.googleapis.com/css?family=Roboto%20Mono" rel='stylesheet' type='text/css'>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Momentum App</title>
+</head>
+<body>
+    <form class="hidden" id="login-form"> 
+<!-- input의 유효성을 체크하기 위해서는 div가 아닌 form 안에 있어야 함-->
+        <input required 
+        maxlength="15"
+        type="text" 
+        placeholder="What is your name?" />
+        <button>Log In</button> <!-- <input type="submit" value="Log In"/>와 같은 역할-->
+    </form> <!-- form 안에 있는 것은 submit이 되기 때문에 click이 아닌 submit으로 관리해야함-->
+    <h1 class="hidden" id="greeting"></h1>    
+    <h2 id="clock">00:00:00</h2>
+    <form class="hidden" id="login-form">
+    </form>
+    <h1 class="hidden" id="greeting"></h1>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To-Do and press Enter." required />
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+        <script src="js/background.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/greetings.js"></script>
+        <script src="js/todo.js"></script>
+        <script src="js/weather.js"></script>
+</body>
+</html>
